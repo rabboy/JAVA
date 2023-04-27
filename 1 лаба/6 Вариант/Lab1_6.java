@@ -17,6 +17,7 @@ public class Lab1_6 {
         double x = input.nextDouble();
 
         double y = (Math.sqrt(Math.pow(Math.E, (2*x+b))) - 1.7 * Math.cos(c * x)) / (Math.log(Math.pow(x, 2) + a));
+        
         System.out.println("F(" + a +", " + b + ", " + c + ", " + x + ") = " + y);
     }
 }
