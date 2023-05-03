@@ -1,14 +1,13 @@
-import java.awt.*; //импортируем библиотеку Awt
-import javax.swing.*; //импортируем библиотеку swing
+import java.awt.*;
+import javax.swing.*;
 public class Lab2_House extends JFrame {
-    Lab2_House(String s) {//создаем конструктор класса Lab2_House
-        super(s);
-        setLayout(null); //отключение менеджера компонентов окна
-        setSize(300,500); //указываем размеры окна
-        setVisible(true); //делаем окно видимым
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE); //закрытие окна
+    Lab2_House(String s) {
+        setLayout(null);
+        setSize(300,500);
+        setVisible(true);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    public void paint(Graphics my_picture){ //метод paint()
+    public void paint(Graphics my_picture){ 
         my_picture.setColor(Color.LIGHT_GRAY); 
         my_picture.fillRect(0, 0, 300, 800);
         my_picture.setColor(Color.BLACK);
@@ -21,6 +20,6 @@ public class Lab2_House extends JFrame {
         my_picture.drawOval(155, 340, 10, 10);
     }
     public static void main(String[] args) {
-        new Lab2_House(""); //создаем экземпляр класса Lab2_House
+        new Lab2_House("Domik!"); 
     }
 } 
