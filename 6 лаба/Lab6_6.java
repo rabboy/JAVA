@@ -1,10 +1,11 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Lab6_11  {
+public class Lab6_6  {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        int z = 0;
+        boolean swapped;
+        double temp;
         try{
             System.out.print("Введите количество элементов массива: ");
             int x = scan.nextInt();
@@ -13,26 +14,21 @@ public class Lab6_11  {
                 System.out.print("Введите элемент массива': ");
                 myArray[i] = scan.nextDouble();
             }
-            boolean sorted = false;
-            double temp;
-            double stop;
-            while(!sorted) {
-                sorted = true;
-                stop = true;
-                for (int i = z; i < myArray.length - 1; i++) {
-                    if (myArray[i] > myArray[i+1]) {
-                        stop = false;
-                        temp = myArray[i];
-                        myArray[i] = myArray[i+1];
-                        myArray[i+1] = temp;
-                        sorted = false;
-                    }
-                    else{
-                        if(!stop){
-                            z++;
+            int n = myArray.length;
+            for (int i = 0; i < n; i++){
+                swapped = false;
+                for (int j = 0; j < n - i - 1; j++){
+                    if (myArray[j] > myArray[j+1]){
+                        temp = myArray[j];
+                        myArray[j] = myArray[j + 1];
+                        myArray[j + 1] = temp;
+                        swapped = true;
+                        if (!swapped){
+                            break;
                         }
                     }
                 }
+
             }
             System.out.print("Отсортированный массив: ");
             for(double values : myArray){
